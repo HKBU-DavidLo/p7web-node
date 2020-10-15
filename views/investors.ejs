@@ -1,0 +1,132 @@
+<%- include('./includes/head.ejs') %>
+
+<div class="jumbotron p-0">
+    <img class="img-fluid" src="../img/ban_ir.png">
+</div>
+
+<div class="container-fluid p-0">
+    <h1 class="text-uppercase text-center mb-4"><%= __('Investor Relations') %></h1>
+</div>
+
+<section class="bg-white px-4 py-5">
+    <div class="container">
+        <ul class="nav nav-tabs nav-justified flex-column flex-md-row" role="tablist">
+            <li class="nav-item">
+                <a href="#announcements" class="nav-link"  data-toggle="tab" role="tab"><%= __('Announcements') %></a>
+            </li>
+            <li class="nav-item">
+                <a href="#circulars" class="nav-link" data-toggle="tab" role="tab"><%= __('Circulars') %></a>
+            </li>
+            <li class="nav-item">
+                <a href="#reports" class="nav-link" data-toggle="tab" role="tab"><%= __('Financials') %></a>
+            </li>
+            <li class="nav-item">
+                <a href="#returns" class="nav-link" data-toggle="tab" role="tab"><%= __('Other Returns') %></a>
+            </li>
+            <li class="nav-item">
+                <a href="#prospectus" class="nav-link" data-toggle="tab" role="tab"><%= __('Prospectus') %></a>
+            </li>
+            <li class="nav-item">
+                <a href="#governance" class="nav-link" data-toggle="tab" role="tab"><%= __('CG') %></a>
+            </li>
+        </ul>
+        <div class="tab-content responsive px-4">
+            <div class="tab-pane active" id="announcements" role="tabpanel">
+                <div class="container-fluid">
+                    <div class="row mt-3">
+                        <div class="col py-3">
+                            <h4 id="announcements" style="color: #007c89;"><%= __('Announcements') %></h4>
+                            <p class="pb-5"><%= __('no ann') %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="circulars" role="tabpanel">
+                <div class="container-fluid">
+                    <div class="row mt-3">
+                        <div class="col py-3">
+                            <h4 id="announcements" style="color: #007c89;"><%= __('Circulars') %></h4>
+                            <p class="pb-5"><%= __('no cir') %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="reports" role="tabpanel">
+                <div class="container-fluid">
+                    <div class="row mt-3">
+                        <div class="col py-3">
+                            <h4 id="reports" style="color: #007c89;"><%= __('Financial Reports') %></h4>
+                            <p class="pb-5"><%= __('no fin') %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="returns" role="tabpanel">
+                <div class="container-fluid">
+                    <div class="row mt-3">
+                        <div class="col py-3">
+                            <h4 id="reports" style="color: #007c89;"><%= __('Other Returns') %></h4>
+                            <p class="pb-5"><%= __('no returns') %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="prospectus" role="tabpanel">
+                <div class="container-fluid">
+                    <div class="row mt-3">
+                        <div class="col py-3">
+                            <h4 id="reports" style="color: #007c89;"><%= __('Prospectus') %></h4>
+                            <table cellpadding="0" cellspacing="0" style="width: 650px; border: 0;" class="table mx-auto my-4">     
+                                <thead style="font-weight: bold; margin-bottom: 20px;">
+                                    <td style="width: 120px;"><%= __('Date') %></td>
+                                    <td style="width: 480px;"><%= __('Title') %></td>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 120px;">30/9/2020</td>
+                                        <td style="width: 480px;"><a href="/files/prospectus/formal-notice-20200930.pdf"><%= __('Formal Notice') %></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 120px;">30/9/2020</td>
+                                        <td style="width: 480px;"><a href="/files/prospectus/prospectus-20200930.pdf"><%= __('Share Offer') %></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="governance" role="tabpanel">
+                <div class="container-fluid">
+                    <div class="row mt-3">
+                        <div class="col py-3">
+                            <h4 id="reports" style="color: #007c89;"><%= __('CG') %></h4>
+                            <h6><%= __('Board Committees') %></h6>
+                            <ul class="list-unstyled">
+                                <li><span class="mx-3"><i class="fas fa-chevron-right text-warning"></i></span><a href="#" class="text-secondary"><%= __('AC ToR') %></a></li>
+                                <li><span class="mx-3"><i class="fas fa-chevron-right text-warning"></i></span><a href="#" class="text-secondary"><%= __('NC ToR') %></a></li>
+                                <li><span class="mx-3"><i class="fas fa-chevron-right text-warning"></i></span><a href="#" class="text-secondary"><%= __('RC ToR') %></a></li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-secondary"><%= __('Director roles and functions') %></a></li>
+                                <li><a href="#" class="text-secondary"><%= __('MnA') %></a></li>
+                                <li><a href="#" class="text-secondary"><%= __('Dir Nom') %></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="emp-box"></div>
+    </div>
+</section>
+
+<%- include('./includes/end.ejs') %>
