@@ -3,7 +3,7 @@ const path = require('path')
 const express = require('express')
 
 // require for i18n
-const session = require('express-session')
+const session = require('cookie-session')
 const cookieParser = require('cookie-parser')
 const i18n = require('i18n')
 
