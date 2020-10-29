@@ -2,9 +2,9 @@
   "name": "project7",
   "version": "1.0.0",
   "description": "official-website",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "NODE_ENV=production MONGO_USER=tailikhk MONGO_password=sk5IEYeioGcYjR4c MONGO_DEFAULT_DATABASE=i18n-trial node src/app.js"
   },
   "keywords": [
     "richwell",
@@ -15,10 +15,11 @@
   "author": "David Lo",
   "license": "ISC",
   "dependencies": {
+    "connect-mongodb-session": "^2.4.1",
     "cookie-parser": "^1.4.5",
-    "cookie-session": "^1.4.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "i18n": "^0.13.2"
   }
 }

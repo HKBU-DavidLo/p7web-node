@@ -3,18 +3,26 @@ const path = require('path')
 const express = require('express')
 
 // require for i18n
-const session = require('cookie-session')
+const session = require('express-session')
+const MongoDBStore = require('connect-mongodb-session')(session)
 const cookieParser = require('cookie-parser')
 const i18n = require('i18n')
 
 const errorController = require('../controllers/error')
 const siteController = require('../controllers/siteControl')
+const uri = 'mongodb+srv://tailikhk:sk5IEYeioGcYjR4c@cluster0.ipfgb.mongodb.net/i18n-trial?retryWrites=true&w=majority'
+//const uri = 'mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_password}@cluster0.ipfgb.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}?retryWrites=true&w=majority'
 
 const app = express()
 const port = process.env.PORT || 3000
 
 app.set('view engine', 'ejs')
 app.set('../views', 'views')
+
+const store = new MongoDBStore ({
+    uri: uri,
+    collection: 'sessions'
+})
 
 // i18n setup
 i18n.configure({
@@ -24,9 +32,10 @@ i18n.configure({
     cookie: 'lhli18n'
 })
 
-app.use(cookieParser('lhli18n'))
+app.use(cookieParser('project7 secret'))
 app.use(session({
-    secret: "landrich",
+    secret: "project7 secret",
+    store: store,
     resave: true,
     saveUninitialized: true,
     cookie: { maxAge: 60000 }
