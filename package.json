@@ -4,7 +4,7 @@
   "description": "official-website",
   "main": "src/app.js",
   "scripts": {
-    "start": "NODE_ENV=production MONGO_USER=tailikhk MONGO_password=sk5IEYeioGcYjR4c MONGO_DEFAULT_DATABASE=i18n-trial node src/app.js"
+    "start": "NODE_ENV=production node src/app.js"
   },
   "keywords": [
     "richwell",
@@ -17,6 +17,7 @@
   "dependencies": {
     "connect-mongodb-session": "^2.4.1",
     "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-session": "^1.17.1",

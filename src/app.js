@@ -10,8 +10,12 @@ const i18n = require('i18n')
 
 const errorController = require('../controllers/error')
 const siteController = require('../controllers/siteControl')
-const uri = 'mongodb+srv://tailikhk:sk5IEYeioGcYjR4c@cluster0.ipfgb.mongodb.net/i18n-trial?retryWrites=true&w=majority'
-//const uri = 'mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_password}@cluster0.ipfgb.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}?retryWrites=true&w=majority'
+
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config()
+}
+
+const uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_password}@cluster0.ipfgb.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}?retryWrites=true&w=majority`
 
 const app = express()
 const port = process.env.PORT || 3000
