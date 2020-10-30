@@ -36,7 +36,18 @@
                     <div class="row mt-3">
                         <div class="col py-3">
                             <h4 id="announcements" style="color: #007c89;"><%= __('Announcements') %></h4>
-                            <p class="pb-5"><%= __('no ann') %></p>
+                            <table cellpadding="0" cellspacing="0" style="width: 650px; border: 0;" class="table mx-auto my-4">     
+                                <thead style="font-weight: bold; margin-bottom: 20px;">
+                                    <td style="width: 120px;"><%= __('Date') %></td>
+                                    <td style="width: 480px;"><%= __('Title') %></td>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 120px;">19/10/2020</td>
+                                        <td style="width: 480px;"><a href="/files/ann/allotment-201019.pdf"><%= __('Share Offer - Allotment Results') %></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -69,7 +80,18 @@
                     <div class="row mt-3">
                         <div class="col py-3">
                             <h4 id="reports" style="color: #007c89;"><%= __('Other Returns') %></h4>
-                            <p class="pb-5"><%= __('no returns') %></p>
+                            <table cellpadding="0" cellspacing="0" style="width: 650px; border: 0;" class="table mx-auto my-4">     
+                                <thead style="font-weight: bold; margin-bottom: 20px;">
+                                    <td style="width: 120px;"><%= __('Date') %></td>
+                                    <td style="width: 480px;"><%= __('Title') %></td>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 120px;">2/11/2020</td>
+                                        <td style="width: 480px;"><a href="#"><%= __('Monthly Return') %></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -108,14 +130,14 @@
                             <h4 id="reports" style="color: #007c89;"><%= __('CG') %></h4>
                             <h6><%= __('Board Committees') %></h6>
                             <ul class="list-unstyled">
-                                <li><span class="mx-3"><i class="fas fa-chevron-right text-warning"></i></span><a href="#" class="text-secondary"><%= __('AC ToR') %></a></li>
-                                <li><span class="mx-3"><i class="fas fa-chevron-right text-warning"></i></span><a href="#" class="text-secondary"><%= __('NC ToR') %></a></li>
-                                <li><span class="mx-3"><i class="fas fa-chevron-right text-warning"></i></span><a href="#" class="text-secondary"><%= __('RC ToR') %></a></li>
+                                <li><span class="mx-3"><i class="fas fa-chevron-right text-warning"></i></span><a href="/files/cg/AC_ref_201019.pdf" class="text-secondary"><%= __('AC ToR') %></a></li>
+                                <li><span class="mx-3"><i class="fas fa-chevron-right text-warning"></i></span><a href="/files/cg/NC_ref_201019.pdf" class="text-secondary"><%= __('NC ToR') %></a></li>
+                                <li><span class="mx-3"><i class="fas fa-chevron-right text-warning"></i></span><a href="/files/cg/RC_ref_201019.pdf" class="text-secondary"><%= __('RC ToR') %></a></li>
                             </ul>
                             <ul class="list-unstyled">
-                                <li><a href="#" class="text-secondary"><%= __('Director roles and functions') %></a></li>
-                                <li><a href="#" class="text-secondary"><%= __('MnA') %></a></li>
-                                <li><a href="#" class="text-secondary"><%= __('Dir Nom') %></a></li>
+                                <li><a href="/files/cg/dir_roles_201019.pdf" class="text-secondary"><%= __('Director roles and functions') %></a></li>
+                                <li><a href="/files/cg/mna_201019.pdf" class="text-secondary"><%= __('MnA') %></a></li>
+                                <li><a href="/files/cg/dir_nom_201019.pdf" class="text-secondary"><%= __('Dir Nom') %></a></li>
                             </ul>
                         </div>
                     </div>
